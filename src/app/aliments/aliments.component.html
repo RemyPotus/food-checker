@@ -1,0 +1,34 @@
+<div class="w-4/5 mx-auto">
+    <h1> Liste des aliments français </h1>
+    <div class="flex flex-wrap	">
+        <div *ngFor="let aliment of aliments;" class="mr-4 my-2 p-2 bg-white w-1/5 flex-auto">
+            <p class="text-xl">{{aliment.generic_name_fr}}</p>
+            <img class="m-auto my-2" src="{{aliment.image_front_small_url}}">
+            <table class="w-max m-auto">
+                <thead>
+                    <th></th>
+                    <th>Pour 100 grammes : </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Protéines :</td>
+                        <td class="text-right">{{aliment.nutriments["proteins_100g"]}}g</td>
+                    </tr>
+                    <tr>
+                        <td>Glucides : </td>
+                        <td class="text-right">{{aliment.nutriments["carbohydrates_100g"]}}g</td>
+                    </tr>
+                    <tr>
+                        <td>Gras : </td>
+                        <td class="text-right">{{aliment.nutriments["fat_100g"]}}g</td>
+                    </tr>
+                    <tr>
+                        <td>Kcal : </td>
+                        <td class="text-right">{{aliment.nutriments["energy-kcal_100g"]}}g</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+ 
