@@ -1,10 +1,12 @@
 <div class="w-4/5 mx-auto">
-    <h1> Liste des aliments français </h1>
+    <h1 class="text-4xl"> Liste des aliments français </h1>
     <div class="flex flex-wrap	">
         <div *ngFor="let aliment of aliments;" class="mr-4 my-2 p-2 bg-white w-1/5 flex-auto">
-            <p class="text-xl">{{aliment.generic_name_fr}}</p>
+            <div class="h-20">
+                <p class="text-xl">{{aliment.generic_name_fr}}</p>
+            </div>
             <img class="m-auto my-2" src="{{aliment.image_front_small_url}}">
-            <table class="w-max m-auto">
+            <table class="m-auto">
                 <thead>
                     <th></th>
                     <th>Pour 100 grammes : </th>
