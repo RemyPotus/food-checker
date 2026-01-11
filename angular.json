@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "food-checker:build:production"
+              "buildTarget": "food-checker:build:production"
             },
             "development": {
-              "browserTarget": "food-checker:build:development"
+              "buildTarget": "food-checker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "food-checker:build"
+            "buildTarget": "food-checker:build"
           }
         },
         "test": {
