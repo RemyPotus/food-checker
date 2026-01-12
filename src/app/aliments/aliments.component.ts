@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Aliment } from '../models/Aliment';
 import { AlimentService } from '../services/AlimentService';
 
@@ -6,7 +7,8 @@ import { AlimentService } from '../services/AlimentService';
     selector: 'app-aliments',
     templateUrl: './aliments.component.html',
     styleUrls: ['./aliments.component.scss'],
-    standalone: false
+    standalone: true,
+    imports: [CommonModule]
 })
 
 export class AlimentsComponent implements OnInit {
