@@ -3,9 +3,10 @@ import { Aliment } from '../models/Aliment';
 import { AlimentService } from '../services/AlimentService';
 
 @Component({
-  selector: 'app-aliments',
-  templateUrl: './aliments.component.html',
-  styleUrls: ['./aliments.component.scss']
+    selector: 'app-aliments',
+    templateUrl: './aliments.component.html',
+    styleUrls: ['./aliments.component.scss'],
+    standalone: false
 })
 
 export class AlimentsComponent implements OnInit {
