@@ -48,7 +48,6 @@ export class AlimentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.alimentService.getAliments().subscribe((data: any) =>{
-      console.log(data)
       if(data.products !== null){
         this.aliments = data.products
       }
