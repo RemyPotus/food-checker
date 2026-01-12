@@ -1,36 +1,37 @@
 <div class="w-4/5 mx-auto">
-    <h1 class="text-4xl"> Liste des aliments français </h1>
-    <div class="flex flex-wrap	">
-        <div *ngFor="let aliment of aliments;" class="mr-4 my-2 p-2 bg-white w-1/5 flex-auto">
-            <div class="h-20">
-                <p class="text-xl">{{aliment.generic_name_fr}}</p>
-            </div>
-            <img class="m-auto my-2" src="{{aliment.image_front_small_url}}">
-            <table class="m-auto">
-                <thead>
-                    <th></th>
-                    <th>Pour 100 grammes : </th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Protéines :</td>
-                        <td class="text-right">{{aliment.nutriments["proteins_100g"]}}g</td>
-                    </tr>
-                    <tr>
-                        <td>Glucides : </td>
-                        <td class="text-right">{{aliment.nutriments["carbohydrates_100g"]}}g</td>
-                    </tr>
-                    <tr>
-                        <td>Gras : </td>
-                        <td class="text-right">{{aliment.nutriments["fat_100g"]}}g</td>
-                    </tr>
-                    <tr>
-                        <td>Kcal : </td>
-                        <td class="text-right">{{aliment.nutriments["energy-kcal_100g"]}}g</td>
-                    </tr>
-                </tbody>
-            </table>
+  <h1 class="text-4xl"> Liste des aliments français </h1>
+  <div class="flex flex-wrap	">
+    @for (aliment of aliments; track aliment) {
+      <div class="mr-4 my-2 p-2 bg-white w-1/5 flex-auto">
+        <div class="h-20">
+          <p class="text-xl">{{aliment.generic_name_fr}}</p>
         </div>
-    </div>
+        <img class="m-auto my-2" src="{{aliment.image_front_small_url}}">
+        <table class="m-auto">
+          <thead>
+            <th></th>
+            <th>Pour 100 grammes : </th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Protéines :</td>
+              <td class="text-right">{{aliment.nutriments["proteins_100g"]}}g</td>
+            </tr>
+            <tr>
+              <td>Glucides : </td>
+              <td class="text-right">{{aliment.nutriments["carbohydrates_100g"]}}g</td>
+            </tr>
+            <tr>
+              <td>Gras : </td>
+              <td class="text-right">{{aliment.nutriments["fat_100g"]}}g</td>
+            </tr>
+            <tr>
+              <td>Kcal : </td>
+              <td class="text-right">{{aliment.nutriments["energy-kcal_100g"]}}g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    }
+  </div>
 </div>
- 

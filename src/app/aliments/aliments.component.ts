@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Aliment } from '../models/Aliment';
 import { AlimentService } from '../services/AlimentService';
 
 @Component({
-  selector: 'app-aliments',
-  templateUrl: './aliments.component.html',
-  styleUrls: ['./aliments.component.scss']
+    selector: 'app-aliments',
+    templateUrl: './aliments.component.html',
+    styleUrls: ['./aliments.component.scss'],
+    standalone: true,
 })
 
 export class AlimentsComponent implements OnInit {
@@ -46,7 +48,6 @@ export class AlimentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.alimentService.getAliments().subscribe((data: any) =>{
-      console.log(data)
       if(data.products !== null){
         this.aliments = data.products
       }

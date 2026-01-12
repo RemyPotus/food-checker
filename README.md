@@ -1,27 +1,87 @@
-# FoodChecker
+# 🍎 FoodChecker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
+FoodChecker is a personal Angular project built to showcase modern Angular and TypeScript best practices through a simple and useful nutrition-focused application.
 
-## Development server
+The app allows users to explore food products and their nutritional values (macros, ingredients, labels) using real-world open data.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🎯 Project Goals
 
-## Code scaffolding
+Demonstrate strong Angular & TypeScript skills
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Practice clean architecture and maintainable code
 
-## Build
+Consume and manipulate real external API data
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Build a simple, clear and efficient UI/UX
 
-## Running unit tests
+Serve as a portfolio project for my GitHub profile
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🚀 Features (current & planned)
 
-## Running end-to-end tests
+🔍 Search food products
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+🥗 Display nutritional information (macros, calories, ingredients)
 
-## Further help
+📊 Clear data presentation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+♻️ Reactive data handling
+
+## Planned improvements:
+
+Favorites / history
+
+Better filtering & sorting
+
+Improved accessibility
+
+Unit & integration tests
+
+## 🛠️ Tech Stack
+
+Angular (latest version)
+
+TypeScript (latest version)
+
+RxJS
+
+Angular Standalone Components
+
+OpenFoodFacts API
+
+Data source:
+👉 https://fr.openfoodfacts.org
+
+## 🧠 Concepts & Skills Demonstrated
+
+Angular standalone architecture
+
+Feature-driven design
+
+RxJS & observables
+
+HTTP client & API consumption
+
+Type-safe data models
+
+Clean folder structure
+
+Reusable UI components
+
+▶️ Getting Started
+git clone https://github.com/your-username/foodchecker.git
+cd foodchecker
+npm install
+ng serve
+
+
+Then open:
+http://localhost:4200/
+
+📌 Why this project?
+
+This project was created as a learning and showcase initiative, not a production app.
+Its main purpose is to demonstrate how I structure, write and think about Angular applications.
+
+📄 License
+
+This project is open-source and uses public data from OpenFoodFacts.
