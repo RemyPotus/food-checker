@@ -1,55 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 
-import { Aliment } from '../models/Aliment';
-import { AlimentService } from '../services/AlimentService';
+import { Aliment } from '../models/aliment.model';
+import { AlimentService } from '../services/aliment.service';
+import { mockAlimentList } from './consts/mock-list.const';
+import { SearchResponseDto } from '../models/search-response.model';
 
 @Component({
     selector: 'app-aliments',
     templateUrl: './aliments.component.html',
     styleUrls: ['./aliments.component.scss'],
-    standalone: true,
 })
 
 export class AlimentsComponent implements OnInit {
-  aliments: Array<Aliment> = [
-    {
-      generic_name_fr: "Chocolat",
-      nutriments: {
-        "energy-kcal_100g":256,
-        "carbohydrates_100g":50,
-        "proteins_100g":10,
-        "fat_100g":40
-      },
-      image_front_small_url: 'some link to an image'
-    },
-    {
-      generic_name_fr: "Nutella",
-      nutriments: {
-        "energy-kcal_100g":539,
-        "carbohydrates_100g":57.5,
-        "proteins_100g":6.3,
-        "fat_100g":30.9
-      },
-      image_front_small_url: 'some link to an image'
-    },
-    {
-      generic_name_fr: "Test",
-      nutriments: {
-        "energy-kcal_100g":1,
-        "carbohydrates_100g":2,
-        "proteins_100g":3,
-        "fat_100g":4
-      },
-      image_front_small_url: 'some link to an image'
-    }
-  ];
 
-  constructor(private alimentService: AlimentService) {}
+  public aliments = signal<Aliment[]>(mockAlimentList);
+  private alimentService = inject(AlimentService);
 
   ngOnInit(): void {
-    this.alimentService.getAliments().subscribe((data: any) =>{
+    this.alimentService.getAliments().subscribe((data: SearchResponseDto) =>{
       if(data.products !== null){
-        this.aliments = data.products
+        const mappedAliments: Aliment[] = data.products.map((product) => {
+          return {
+            generic_name: product.generic_name,
+            nutriments: product.nutriments,
+            image_url: product.image_url
+          } as Aliment
+        });
+
+        this.aliments.set(mappedAliments);
       }
     })
   }
