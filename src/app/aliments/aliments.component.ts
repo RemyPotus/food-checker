@@ -1,9 +1,9 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 
-import { Aliment } from '../models/aliment.model';
-import { AlimentService } from '../services/aliment.service';
+import { Aliment } from './models/aliment.model';
+import { AlimentService } from './services/aliment.service';
 import { mockAlimentList } from './consts/mock-list.const';
-import { SearchResponseDto } from '../models/search-response.model';
+import { SearchResponseDto } from './models/search-response.model';
 
 @Component({
     selector: 'app-aliments',
