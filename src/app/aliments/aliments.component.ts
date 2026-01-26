@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 
 import { Aliment } from './models/aliment.model';
 import { AlimentService } from './services/aliment.service';
@@ -9,6 +9,7 @@ import { SearchResponseDto } from './models/search-response.model';
     selector: 'app-aliments',
     templateUrl: './aliments.component.html',
     styleUrls: ['./aliments.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class AlimentsComponent implements OnInit {

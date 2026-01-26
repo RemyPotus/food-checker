@@ -1,4 +1,4 @@
-import { Aliment } from "..models/aliment.model";
+import { Aliment } from "../models/aliment.model";
 
 export const mockAlimentList: Aliment[] = [
 {
